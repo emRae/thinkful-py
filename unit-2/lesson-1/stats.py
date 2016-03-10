@@ -33,8 +33,8 @@ print("The Alcohol and Tobacco dataset Tobacco mean is " + str(df['Tobacco'].mea
 print("The Alcohol and Tobacco dataset Alcohol median is " + str(df['Alcohol'].median())+ "." )
 print("The Alcohol and Tobacco dataset Tobacco median is " + str(df['Tobacco'].median())+ "." )
 
-print("The Alcohol and Tobacco dataset Alcohol mode is " + str(stats.mode(df['Alcohol']))+ "." )
-print("The Alcohol and Tobacco dataset Tobacco mode is " + str(stats.mode(df['Tobacco']))+ "." )
+print("The Alcohol and Tobacco dataset Alcohol mode is " + str(stats.mode(df['Alcohol'])[0][0])+ "." )
+print("The Alcohol and Tobacco dataset Tobacco mode is " + str(stats.mode(df['Tobacco'])[0][0])+ "." )
 
 print("The Alcohol and Tobacco dataset Alcohol range is " + str(max(df['Alcohol']) - min(df['Alcohol']))+"." )
 print("The Alcohol and Tobacco dataset Tobacco range is " + str(max(df['Tobacco']) - min(df['Tobacco']))+"." )

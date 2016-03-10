@@ -65,5 +65,4 @@ df = pd.DataFrame(rows, columns=cols)
 print("The cities that are warmest in July are: ")
 
 
-
 # Push your code to GitHub and enter the link below
