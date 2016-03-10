@@ -59,10 +59,12 @@ rows = cur.fetchall()
 cols = [desc[0] for desc in cur.description]
 df = pd.DataFrame(rows, columns=cols)
 
+df['citystate'] = df['name'] + ', ' + df['state']
+
 
 # Print out the resulting city and state in a full sentence. For example: "The cities that are warmest in July are: Las Vegas, NV, // Atlanta, GA..."
 
-print("The cities that are warmest in July are: ")
+print("The cities that are warmest in July are " + ' // '.join(list(df['citystate'].values)) )
 
 
 # Push your code to GitHub and enter the link below
