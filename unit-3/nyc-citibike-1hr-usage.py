@@ -52,6 +52,7 @@ with con:
 
 # a package with datetime objects
 import time
+import datetime
 
 # a package for parsing a string into a Python datetime object
 from dateutil.parser import parse 
@@ -78,7 +79,7 @@ with con:
         cur.execute("UPDATE available_bikes SET _" + str(k) + " = " + str(v) + " WHERE execution_time = " + exec_time.strftime('%s') + ";")
 
 
-for i in range(60):
+for i in range(5):
     r = requests.get('http://www.citibikenyc.com/stations/json')
     exec_time = parse(r.json()['executionTime']).strftime("%s")
 
